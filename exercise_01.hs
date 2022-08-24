@@ -62,7 +62,7 @@ soma n1 n2 = sum [n1..n2]
 
 --7- Dados dois números n1 e n2, encontrar os múltiplos de n3 que se encontram nesse intervalo (inclusivo).
 
-multiplos a b c = [x*c | x <-[a..b], x*c<=b] 
+multiplos a b c = [x | x <-[a..b], x `mod` c == 0]
 
 -- 8- criar uma função que retona o resto de uma divisão, sem usar o mod
 quociente x y = x/y
